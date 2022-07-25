@@ -93,16 +93,10 @@ FORFASTINTERNET.TextColor3 = Color3.fromRGB(0, 0, 0)
 FORFASTINTERNET.TextSize = 20.000
 FORFASTINTERNET.MouseButton1Down:connect(function()
 print("hi")
-    for i,v in pairs(getgc(true)) do
-        if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
-            v.OpenEgg = function()
-                return
-            end
-        end
-    end
- PRINT("SKIP ANIMATION")
+PRINT("SKIP ANIMATION")
 
 while true do
+
 local A_1 = 
 {
 	[1] = "Golden Hell Egg", 
@@ -126,6 +120,13 @@ local A_3 =
 }
 local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["buy egg"]
 Event:InvokeServer(A_3)
+    for i,v in pairs(getgc(true)) do
+        if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
+            v.OpenEgg = function()
+                return
+            end
+        end
+    end
 end
 end)
 
