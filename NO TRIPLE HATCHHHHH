@@ -60,6 +60,13 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)    
 print("anti afk done")
+    for i,v in pairs(getgc(true)) do
+        if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
+            v.OpenEgg = function()
+                return
+            end
+        end
+    end
 
 end)
 
@@ -120,13 +127,7 @@ local A_3 =
 }
 local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["buy egg"]
 Event:InvokeServer(A_3)
-    for i,v in pairs(getgc(true)) do
-        if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
-            v.OpenEgg = function()
-                return
-            end
-        end
-    end
+
 end
 end)
 
